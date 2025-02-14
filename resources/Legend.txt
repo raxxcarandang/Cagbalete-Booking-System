@@ -1,0 +1,149 @@
+Booking Status: 
+0 - Pending
+1 - Approved
+2- Denied
+
+Gender:
+Male
+Female
+
+Country: 
+0 - International
+1 - Philippines
+2 - Maubanin
+
+Travel Means:
+0 - Public Utility Vehicle
+1 - Private Vehicle
+
+Boat:
+0 - Public
+1 - Private
+2 - Boat Provided by Resort
+
+Purpose:
+0 - Business
+1 - Purpose
+
+Accommodation:
+1 - Aquazul Hotel and Resort ( 09237428368/092347826015) fb photos archived - may website
+2 - Dona Choleng Camping Resort ( 09108823346/09266549958) fb photos archived - may website
+3 - Rio del Sol Beach Resort (09776932453) - may website
+4 - Jovencio's Resort ( 09564135204)
+5 - MVT Sto. Niño Beach Resort ( 09176787080)
+6 - Nilandingan Cove Resort (09151443094)
+7 - Villa Cleofas (Cagbalete Island Camping Resort) 09178143475
+8 - Villa Escaparde Camping and Beach Resort (09073700888)
+9 - Villa Noe Beach Resort (09065197126/09126914340)
+10 - Villa Pilarosa Beach Resort (09496608865/09959376995
+11 - Tita Pinay Beach Resort (09108070864)
+12 - Aguho Playa Beach Resort (09670061937)
+13 - Tent Place (09988845443 / 09100956370)
+14 - Orlan Beach Resort (09707100945)
+
+Discounts:
+0 - 7 : 50%
+13 - 59 : 0%
+60+ : 50%
+Foreigner : -25%
+Filipino : 0%
+Maubanin : 25%
+Female : 25%
+Male : 0%
+
+
+	if(acc == 1) {accimg = 'ahr.webp';}
+								else if(acc == 2) {accimg = 'dccr.webp';}
+								else if(acc == 3) {accimg = 'rsbr.webp';}
+								else if(acc == 4) {accimg = 'jr.webp';}
+								else if(acc == 5) {accimg = 'msnbr.webp';}
+								else if(acc == 6) {accimg = 'ncr.webp';}
+								else if(acc == 7) {accimg = 'vccicr.webp';}
+								else if(acc == 8) {accimg = 'vecbr.webp';}
+								else if(acc == 9) {accimg = 'vnbr.webp';}
+								else if(acc == 10) {accimg = 'vpbr.webp';}
+								else if(acc == 11) {accimg = 'tpbr.webp';}
+								else if(acc == 12) {accimg = 'apbr.webp';}
+								else if(acc == 13) {accimg = 'tp.webp';}
+								else if(acc == 14) {accimg = 'obr.webp';}
+
+if(acc == 1) { accimg = 'ahr.webp'; }
+								else if(acc == 2) { accimg = 'dccr.webp'; }
+								else if(acc == 3) { accimg = 'rsbr.webp'; }
+								else if(acc == 4) { accimg = 'jr.webp'; }
+								else if(acc == 5) { accimg = 'msnbr.webp'; }
+								else if(acc == 6) { accimg = 'ncr.webp'; }
+								else if(acc == 7) { accimg = 'vccicr.webp'; }
+								else if(acc == 8) { accimg = 'vecbr.webp'; }
+								else if(acc == 9) { accimg = 'vnbr.webp'; }
+								else if(acc == 10) { accimg = 'vpbr.webp'; }
+								else if(acc == 11) { accimg = 'tpbr.webp'; }
+								else if(acc == 12) { accimg = 'apbr.webp'; }
+								else if(acc == 13) { accimg = 'tp.webp'; }
+								else if(acc == 14) { accimg = 'obr.webp'; }
+								else { accimg = "'null.webp'"; }"
+
+switch (acc) {
+							case 1: 
+							accimg = 'ahr.webp'; 
+							break;
+							case 2: 
+							accimg = 'dccr.webp'; 
+							break;
+							case 3: 
+							accimg = 'rsbr.webp'; 
+							break;
+							case 4: 
+							accimg = 'jr.webp'; 
+							break;
+							case 5: 
+							accimg = 'msnbr.webp'; 
+							break;
+							case 6: 
+							accimg = 'ncr.webp'; 
+							break;
+							case 7: 
+							accimg = 'vccicr.webp'; 
+							break;
+							case 8: 
+							accimg = 'vecbr.webp'; 
+							break;
+							case 9: 
+							accimg = 'vnbr.webp'; 
+							break;
+							case 10: 
+							accimg = 'vpbr.webp'; 
+							break;
+							case 11: 
+							accimg = 'tpbr.webp'; 
+							break;
+							case 12: 
+							accimg = 'apbr.webp'; 
+							break;
+							case 13: 
+							accimg = 'tp.webp'; 
+							break;
+							case 14: 
+							accimg = 'obr.webp'; 
+							break;
+							
+							}
+
+ $booking->accommodation = $request->acc;
+        $booking->arrival = $request->arrival;
+        $booking->departure = $request->departure;
+        $booking->foreigners = $request->foreigners;
+        $booking->filipinos = $request->filipinos;
+        $booking->maubanins =  $request->maubanins;
+        $booking->totalmale =  $request->male;
+        $booking->totalfemale =  $request->female;
+        $booking->totalvisitors =  $request->visitors;
+        $booking->specialneeds =  $request->special;
+        $booking->zeroto7yold =  $request->zero7;
+        $booking->thirteento50yold =  $request->thirth;
+        $booking->above60yold =  $request->above60;
+        $booking->travelmeans =  $request->tmeans;
+        $booking->parking =  $request->parking;
+        $booking->boating =  $request->boat;
+        $booking->purpose = $request->purpose;
+        $booking->status =  $request->status;

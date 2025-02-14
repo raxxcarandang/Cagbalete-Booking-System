@@ -1,0 +1,26 @@
+@foreach ($accommodations as $accommodation)
+@if ($accommodation->name !== 'Other')
+<div class="col-sm col-md-6 col-lg-4 ftco-animate" id="acccont">
+	<div class="room" id="acccontroom">
+		<a href="{{ url('accommodation') }}?supplier={{ $accommodation->id }}" class="img d-flex justify-content-center align-items-center" style="background-image: url(images/resort/thumbnail/{{ $accommodation->thumbnail }});">
+			<div class="icon d-flex justify-content-center align-items-center">
+				<span class="icon-search2"></span>
+			</div>
+		</a>
+		<div class="text p-3 text-center" id="accbooknow">
+			<h3 class="mb-3" id="acctitle">
+				<a href="{{ url('accommodation') }}?supplier={{ $accommodation->id }}">{{ $accommodation->name }}</a>
+			</h3>
+			<ul class="list">
+				<li><span>Type:</span> {{ $accommodation->type }}</li>
+				<li><span>Lodging:</span> {{ $accommodation->lodge }}</li>
+			</ul>
+			<hr>
+			<p class="pt-1">
+				<a href="{{ url('booking') }}?booking={{ $accommodation->id }}" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a>
+			</p>
+		</div>
+	</div>
+</div>
+@endif
+@endforeach

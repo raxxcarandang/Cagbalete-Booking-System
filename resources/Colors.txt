@@ -1,0 +1,95 @@
+When choosing colors to signify different booking statuses, it's important to choose colors that are intuitive, easily distinguishable, and aligned with common color conventions used in UI design. Here’s a set of color suggestions for each booking status:
+
+1. Pending
+Color: Light Yellow or Amber
+Hex: #FFEB3B or #FFC107
+Reason: Yellow is often associated with something awaiting attention, signaling a process that is in progress but not yet complete.
+2. Denied
+Color: Red or Light Red
+Hex: #F44336 or #FFCDD2
+Reason: Red universally signifies rejection, danger, or something being disapproved. It's a strong visual cue to indicate an issue.
+3. Approved
+Color: Green
+Hex: #4CAF50 or #81C784
+Reason: Green is commonly associated with success, approval, or go-ahead actions. It’s a clear signal of a positive outcome.
+4. Confirmed
+Color: Blue
+Hex: #2196F3 or #64B5F6
+Reason: Blue typically signifies certainty, security, and finality. It's commonly used to indicate that something is officially confirmed or locked in.
+5. Rescheduled
+Color: Orange
+Hex: #FF9800 or #FFB74D
+Reason: Orange can indicate change or action. It stands out as a “neutral” but still urgent color, signifying a change without being as alarming as red.
+6. Re: Pending
+Color: Light Blue or Cyan
+Hex: #00BCD4 or #B2EBF2
+Reason: Light blue or cyan suggests a state that is still in process, but with an implied follow-up or update. It can signal that the request is back in a waiting or uncertain state.
+7. Re: Approved
+Color: Light Green or Lime
+Hex: #8BC34A or #C5E1A5
+Reason: A softer green indicates that approval has been revisited or renewed. It conveys that the action has been reconsidered and granted again.
+8. Re: Confirmed
+Color: Darker Blue or Teal
+Hex: #1976D2 or #00796B
+Reason: A deeper blue or teal can signal that the confirmation has been revisited or reaffirmed, but with more emphasis on certainty compared to initial confirmation.
+al Status Colors with Lighter and Darker Versions:
+Full Table with Checked-In:
+Status	Suggested Color	Hex Code	Lighter Version	Hex Code	Darker Version	Hex Code
+Pending	Light Yellow / Amber	#FFEB3B	Light Amber	#FFEE58	Dark Yellow	#FBC02D
+Denied	Red / Light Red	#F44336	Light Coral	#FF7961	Dark Red	#D32F2F
+Approved	Green	#4CAF50	Light Green	#81C784	Dark Green	#388E3C
+Confirmed	Blue	#2196F3	Light Sky Blue	#64B5F6	Dark Blue	#1976D2
+Rescheduled	Orange	#FF9800	Light Orange	#FFB74D	Dark Orange	#F57C00
+Re: Pending	Light Blue / Cyan	#00BCD4	Light Cyan	#4DD0E1	Dark Cyan	#0097A7
+Re: Approved	Light Green / Lime	#8BC34A	Light Lime	#A5D6A7	Dark Green	#7CB342
+Re: Confirmed	Dark Blue / Teal	#1976D2	Light Teal	#42A5F5	Teal / Dark Blue	#1565C0
+No Show	Gray / Light Gray	#9E9E9E	Light Gray	#BDBDBD	Dark Gray	#616161
+Expired	Light Gray / Muted Gray	#B0BEC5	Light Slate Gray	#CFD8DC	Dark Gray / Charcoal	#78909C
+Unconfirmed	Light Orange / Yellow-Orange	#FFB74D	Light Apricot	#FFD54F	Dark Orange	#FB8C00
+Completed	Gold	#FFD700	Light Gold	#FFEB3B	Dark Gold	#FFC107
+Cancelled	Light Gray / Soft Red	#B0BEC5 / #E57373	Light Rose	#FFCDD2 / #FF8A80	Dark Red / Gray	#D32F2F / #78909C
+Checked-In	Soft Blue / Teal	#009688	Light Teal	#4DB6AC	Dark Teal	#00796B
+
+Lighter Versions for Background Use:
+Status	Suggested Color	Hex Code	Lightened Version for Background	Hex Code
+Pending	Light Yellow / Amber	#FFEB3B	Very Light Amber	#FFF59D
+Denied	Red / Light Red	#F44336	Very Light Coral	#FF8A80
+Approved	Green	#4CAF50	Very Light Green	#C8E6C9
+Confirmed	Blue	#2196F3	Very Light Sky Blue	#BBDEFB
+Rescheduled	Orange	#FF9800	Very Light Orange	#FFE0B2
+Re: Pending	Light Blue / Cyan	#00BCD4	Very Light Cyan	#B2EBF2
+Re: Approved	Light Green / Lime	#8BC34A	Very Light Lime	#DCE775
+Re: Confirmed	Dark Blue / Teal	#1976D2	Very Light Teal	#82B1FF
+No Show	Gray / Light Gray	#9E9E9E	Very Light Gray	#E0E0E0
+Expired	Light Gray / Muted Gray	#B0BEC5	Very Light Slate Gray	#E3F2FD
+Unconfirmed	Light Orange / Yellow-Orange	#FFB74D	Very Light Apricot	#FFE0B2
+Completed	Gold	#FFD700	Very Light Gold	#FFF59D
+Cancelled	Light Gray / Soft Red	#B0BEC5 / #E57373	Very Light Rose / Soft Red	#F5F5F5 / #FFCCCB
+Checked-In	Soft Blue / Teal	#009688	Very Light Teal	#B2DFDB
+Notes:
+Accessibility: When selecting colors for status indicators, ensure good contrast and accessibility, especially for colorblind users. You may want to consider adding text labels or icons to further clarify the status.
+Consistency: Use consistent color choices throughout your system to avoid confusion. Colors should convey the same meaning in all instances where they are used.
+If you plan to implement these in a web interface, it's always a good idea to test for visibility and accessibility across various devices and lighting conditions.
+
+<!-- link to main activity optional
+								<a href="{{ route('activities.show', $activity->id) }}">
+								</a>
+									-->
+							 <!-- link to main Notification optional
+                                <a href="{{ route('notifications.show', $notification->id) }}">
+								</a>
+								-->
+
+
+CONFIRMED
+
+RESCHEDULED
+
+CHECKED-IN
+
+UNCONFIRMED
+
+EXPIRED
+					
+COMPLETED
+						
