@@ -1,4 +1,4 @@
-# Cagbalete-Booking-System
+# Cagbalete Booking System
 
 [Mauban Tourism Booking Website](https://www.maubantourism.com)
 
