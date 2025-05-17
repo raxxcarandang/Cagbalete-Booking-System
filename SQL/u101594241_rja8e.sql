@@ -24,6 +24,219 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `accommodations`
+--
+
+CREATE TABLE `accommodations` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(254) NOT NULL,
+  `description` varchar(255) NOT NULL,
+  `thumbnail` varchar(255) NOT NULL,
+  `slider` varchar(254) NOT NULL,
+  `type` varchar(254) NOT NULL,
+  `lodge` varchar(254) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `contactno` varchar(128) NOT NULL,
+  `capacity` int(11) NOT NULL,
+  `fee` int(11) NOT NULL,
+  `cla` varchar(254) DEFAULT NULL,
+  `ornum` varchar(254) DEFAULT NULL,
+  `dot` varchar(254) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `accommodations`
+--
+
+INSERT INTO `accommodations` (`id`, `name`, `description`, `thumbnail`, `slider`, `type`, `lodge`, `address`, `contactno`, `capacity`, `fee`, `cla`, `ornum`, `dot`, `created_at`, `updated_at`) VALUES
+(1, 'Aquazul Hotel and Resort', 'Discover Aquazul Hotel and Resort, a luxurious retreat on the Riviera Maya coastline. Renowned for its exceptional service, stunning accommodations, and world-class facilities, Aquazul offers a perfect blend of relaxation and adventure.', 'ahr.webp', '1h.webp', 'Beach & Pool Resort', 'AC Hotel Rooms', 'Brgy. CAGBALETE 1', '09237428368 / 09234782601', 192, 100, '0029-24', '5811539', 'YES', NULL, '2024-12-27 07:23:46'),
+(2, 'Dona Choleng Camping Resort', 'Discover Dona Choleng Camping Resort on Cagbalete Island, Mauban, Philippines. This nature escape offers luxurious camping tents, pristine beaches, water activities, scenic hiking trails, relaxing spa services, and diverse dining options.', '2t.jpg', '2h.webp', 'Camping & Beach Resort', 'AC & Hut Cottages', 'Brgy. Cagbalete 1', '09108823346 / 09266549958', 534, 50, '0003-24', '5809032', 'YES', '0000-00-00 00:00:00', '2024-12-28 03:09:23'),
+(3, 'Rio del Sol Beach Resort', 'Discover the unparalleled luxury and relaxation at Rio Del Sol Beach Resort, located on pristine sun-kissed shores. Enjoy spacious rooms with panoramic sea views, gourmet dining, and an array of recreational activities. With exceptional service and family', '3t.webp', '3h.webp', 'Beach Resort', 'AC Rooms', 'Brgy. Cagbalete 1', '09776932453', 72, 75, '0032-24', '5812710', 'YES', NULL, '2025-02-16 10:52:48'),
+(4, 'Jovencio`s Resort', 'Discover Jovencio`s Resort, a luxurious retreat nestled in picturesque landscapes offering exceptional service and world-class amenities. Whether you`re seeking a romantic getaway, family vacation, or adventure, enjoy elegant accommodations, exquisite din', '4t.webp', '4h.webp', 'Beach Resort', 'Hut Cottages', 'Brgy. Cagbalete 1', '09564135204', 40, 50, '018-24', '5810822', 'YES', NULL, '2025-02-16 11:17:17'),
+(5, 'MVT Sto. Niño Beach Resort', 'Discover MVT Sto. Niño Beach Resort, a luxurious retreat in Mauban City`s Cagbalete Island, Philippines. Known for its pristine beaches, eco-friendly practices, and exceptional hospitality, this resort offers a perfect blend of relaxation and adventure. E', '5t.jpg', '5h.jpg', 'Beach Resort', 'Hut Cottages', 'Brgy. Cagbalete 1', '09176787080', 12, 100, '0017-24', '9934386', 'NO', NULL, '2024-12-27 07:57:29'),
+(6, 'Nilandingan Cove Resort', 'Discover Nilandingan Cove Resort, a luxurious and eco-friendly haven in Cagbalete Island, Philippines. Enjoy stunning beachfront accommodations, rejuvenating spa services, exquisite dining, and a variety of recreational activities. Perfect for family vaca', 'ncr.webp', '6h.jpg', 'Beach Cove Resort', 'Hut Cottages', 'Brgy. Cagbalete 1', '09151443094', 41, 150, '0017-24', '5810821', 'NO', NULL, '2024-12-27 08:02:24'),
+(7, 'Villa Cleofas (Cagbalete Island Camping Resort)', 'Discover Villa Cleofas, a luxurious Mediterranean retreat epitomizing elegance and tranquility. Nestled amidst lush greenery with breathtaking sea views, this villa offers a perfect blend of historical charm and modern sophistication.', 'vccicr.webp', '7h.jpg', 'Beach & Camping Resort', 'Hut Cottages', 'Brgy. Cagbalete', '09178143475', 79, 125, '0019-24', '5809845', 'YES', NULL, '2024-12-27 07:34:50'),
+(8, 'Villa Escaparde Camping and Beach Resort', 'Discover Villa Escaparde, a luxurious retreat in the Island of Cagbalete offering stunning facilities and world-class amenities. Just a short drive from Nice, this elegant villa features contemporary design, a private infinity pool, fitness center, and ex', 'vecbr.webp', '8h.jpg', 'Beach Resort & Hotel', 'AC Hotel Rooms', 'Bgry. Cagbalete 1', '09073700888', 55, 100, '0026-24', '5812103', 'NO', NULL, '2024-12-27 07:29:30'),
+(9, 'Villa Noe Beach Resort', 'Discover Villa Noe Beach Resort, a premier destination on Cagbalete Island, known for its pristine beaches and lush landscapes. Enjoy luxurious accommodations, exceptional hospitality, and a variety of activities including snorkeling, kayaking, and island', 'vnbr.webp', '9h.jpg', 'Beach Resort', 'Hut Cottages', 'Brgy. Cagbalete I', '09065197126 / 09126914340', 110, 100, '0001-24', '5808797', 'NO', NULL, '2024-12-27 07:27:36'),
+(10, 'Villa Pilarosa Beach Resort', 'Discover Villa Pilarosa Beach Resort on Cagbalete Island, a hidden gem offering luxurious accommodations, stunning beachfront views, and eco-friendly practices. Enjoy a range of activities from snorkeling to island-hopping, or relax with our spa services', '10t.jpg', '10h.jpg', 'Beach Resort', 'Hut Cottages', 'Brgy. Cagbalete 2', '09496608865 / 09959376995', 32, 100, '0021-24', '5810979', 'YES', NULL, '2024-10-24 05:55:50'),
+(11, 'Tita Pinay Beach Resort', 'Discover the serene beauty of Tita Pinay Beach Resort on Cagbalete Island. Enjoy pristine white sand beaches, luxurious accommodations, and a variety of recreational activities.', 'tpbr.webp', '11h.jpg', 'Beach Resort', 'Hut Cottages', 'Cagbalete 1', '09108070864', 206, 50, '0014-24', '5809788', 'NO', NULL, '2024-10-24 06:02:23'),
+(12, 'Aguho Playa Beach Resort', 'Discover Aguho Playa Beach Resort on Cagbalete Island, a luxury retreat that offers stunning beachfront views, eco-friendly practices, and a range of activities for families and adventure seekers. Enjoy gourmet dining, relaxing spa treatments, and luxurio', 'apbr.webp', '12h.jpg', 'Beach Resort', 'Hut Cottages', 'Brgy. Cagbalete 1', '09670061937', 10, 100, '0035-24', '5813292', 'YES', NULL, '2024-12-27 07:07:57'),
+(13, 'Tent Place', 'Discover the serene beauty of Cagbalete Island`s Tent Place in the Philippines. This hidden gem offers pristine beaches, lush forests, and diverse wildlife. Enjoy unique tidal landscapes, tent accommodations ranging from basic to luxurious, and a variety ', 'tp.webp', '13h.jpg', 'Beach & Camping Resort', 'Hut Cottages', 'Brgy. Cagbalete 1', '09988845443 / 091009563', 112, 50, '0037-24', '5815273', 'NO', NULL, '2024-10-22 07:23:09'),
+(14, 'Orlan Beach Resort', 'Discover Orlan Beach Resort on Cagbalete Island, a haven of tranquility and eco-friendly luxury. Enjoy pristine beaches, luxurious accommodations, and a commitment to sustainability. Perfect for families, couples, and solo travelers seeking a serene and r', 'obr.webp', '14h.jpg', 'Beach & Camping Resort', 'Hut Cottages', 'Cagbalete 1', '09707100945', 55, 50, '0038-24', '5814982', 'NO', NULL, '2024-10-22 07:19:22'),
+(15, 'Other', 'The best way to discover these hidden gems is by connecting with locals. They are often eager to share insider tips about the best unregistered resorts. Social media groups, travel forums, and recent visitors` reviews can provide valuable insights.', 'other.webp', '', '', '', 'Cagbalete Island, Mauban', 'N/A', 0, 50, NULL, NULL, NULL, NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `activities`
+--
+
+CREATE TABLE `activities` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `userid` bigint(20) NOT NULL,
+  `bookid` bigint(20) DEFAULT NULL,
+  `updatemsg` varchar(512) NOT NULL,
+  `remark` varchar(512) NOT NULL,
+  `read_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `activities`
+--
+
+INSERT INTO `activities` (`id`, `userid`, `bookid`, `updatemsg`, `remark`, `read_at`, `created_at`, `updated_at`) VALUES
+(12, 1, 27, 'Booking # 27 Is Now Pending.', 'Rescheduled due to the ugly storm.', '2024-12-22 10:11:14', '2024-12-22 07:02:36', '2024-12-22 10:11:14'),
+(13, 3, 94, 'Booking # 94 Has New Remark.', 'Big Smoke! Remember That.', '2024-12-22 10:11:14', '2024-12-22 08:08:36', '2024-12-22 10:11:14'),
+(14, 1, 24, 'Anderson\'s Booking # 24 Is Now Pending.', '2nd Chance Boi', '2024-12-22 10:11:14', '2024-12-22 08:15:59', '2024-12-22 10:11:14'),
+(15, 1, 28, 'Anderson\'s Booking # 28 Has New Remark.', 'We have ARRRRIVED!', '2024-12-22 10:11:14', '2024-12-22 08:52:53', '2024-12-22 10:11:14'),
+(16, 1, 27, 'Anderson\'s Booking # 27 Has New Remark.', 'Rescheduled due to your ugliness.', '2024-12-22 10:11:14', '2024-12-22 09:28:11', '2024-12-22 10:11:14'),
+(17, 1, 27, 'Anderson\'s Booking # 27 Is Now Pending.', 'Rescheduled due to your ugliness.', '2024-12-22 10:11:45', '2024-12-22 10:11:30', '2024-12-22 10:11:45'),
+(18, 1, 27, 'Anderson\'s Booking # 27 Is Now Pending.', 'Rescheduled due to your ugliness.', '2024-12-22 10:11:45', '2024-12-22 10:11:31', '2024-12-22 10:11:45'),
+(19, 1, 24, 'Anderson\'s Booking # 24 Is Now Pending.', '2nd Chance Boi', '2024-12-22 10:24:40', '2024-12-22 10:12:55', '2024-12-22 10:24:40'),
+(21, 3, 94, 'Booking # 94Rescheduled by Nigma(#3) from 2024-12-27-2024-12-31 to 2024-12-27-2024-12-31', 'Big Smoke! Remember That.', '2024-12-26 06:21:30', '2024-12-23 03:07:01', '2024-12-26 06:21:30'),
+(22, 3, 94, 'Booking # 94 Confirmed by Nigma(#3)', 'Big Smoke! Remember That.', '2024-12-26 06:21:30', '2024-12-23 03:32:05', '2024-12-26 06:21:30'),
+(23, 3, 94, 'Booking # 94 Confirmed by Nigma(#3)', 'Big Smoke! Remember That.', '2024-12-26 06:21:30', '2024-12-23 03:32:08', '2024-12-26 06:21:30'),
+(24, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-27_2024-12-31) to (2024-12-27_2024-12-31)', 'N/A', '2024-12-26 06:21:30', '2024-12-26 06:10:27', '2024-12-26 06:21:30'),
+(25, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-27_2024-12-31) to (2024-12-27_2024-12-31)', 'N/A', '2024-12-26 06:21:30', '2024-12-26 06:10:28', '2024-12-26 06:21:30'),
+(26, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-28_2024-12-28) to (2024-12-28_2024-12-28)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:28:48', '2024-12-26 06:45:15'),
+(27, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-28_2024-12-28) to (2024-12-28_2024-12-28)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:28:49', '2024-12-26 06:45:15'),
+(28, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2025-01-01_2025-01-01) to (2025-01-01_2025-01-01)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:29:56', '2024-12-26 06:45:15'),
+(29, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2025-01-01_2025-01-01) to (2025-01-01_2025-01-01)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:29:57', '2024-12-26 06:45:15'),
+(30, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-27_2024-12-31) to (2024-12-27_2024-12-31)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:32:16', '2024-12-26 06:45:15'),
+(31, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-27_2024-12-31) to (2024-12-27_2024-12-31)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:32:17', '2024-12-26 06:45:15'),
+(32, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-28_2024-12-31) to (2024-12-28_2024-12-31)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:42:00', '2024-12-26 06:45:15'),
+(33, 7, 96, 'Booking # 96 Rescheduled by Admin(#7) from (2024-12-28_2024-12-31) to (2024-12-28_2024-12-31)', 'N/A', '2024-12-26 06:45:15', '2024-12-26 06:42:00', '2024-12-26 06:45:15'),
+(34, 1, 24, 'Anderson\'s Booking # 24 Is Now Completed.', '2nd Chance Boi', '2024-12-26 08:48:06', '2024-12-26 08:45:50', '2024-12-26 08:48:06'),
+(35, 2, 74, 'Morenz\'s Booking # 74 Is Now Completed.', 'Gimme Ya Best Shot!', '2024-12-26 08:55:04', '2024-12-26 08:51:56', '2024-12-26 08:55:04'),
+(36, 1, 33, 'Anderson\'s Booking # 33 Is Now Pending.', 'Scheduled due to storms', '2024-12-26 08:55:04', '2024-12-26 08:53:51', '2024-12-26 08:55:04'),
+(37, 1, 27, 'Anderson\'s Booking # 27 Is Now Pending.', 'Rescheduled due to your ugliness.', '2025-01-05 05:47:38', '2024-12-26 08:55:00', '2025-01-05 05:47:39'),
+(38, 1, 27, 'Anderson\'s Booking # 27 Has Arrived.', 'Rescheduled due to your ugliness.', '2024-12-26 09:11:49', '2024-12-26 09:07:11', '2024-12-26 09:11:49'),
+(39, 1, 19, 'A new remark has been added to Anderson\'s Booking # 19. Review the updated remark for further action.', 'BACK TO PENDING! BITCH!', '2024-12-26 10:53:41', '2024-12-26 10:07:32', '2024-12-26 10:53:41'),
+(40, 1, 19, 'Anderson\'s Booking # 19 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dfsfsd', '2024-12-26 10:53:41', '2024-12-26 10:18:54', '2024-12-26 10:53:41'),
+(41, 1, 13, 'Anderson\'s Booking # 13 Has Been Marked as Arrived.', '', '2024-12-29 17:09:07', '2024-12-28 23:00:55', '2024-12-29 17:09:07'),
+(42, 1, 14, 'Anderson\'s Booking # 14 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'Stupid Shit!', '2024-12-29 17:09:07', '2024-12-28 23:07:23', '2024-12-29 17:09:07'),
+(43, 1, 15, 'Anderson\'s Booking # 15 Has Been Marked as Arrived.', '', '2024-12-29 17:09:07', '2024-12-29 00:06:44', '2024-12-29 17:09:07'),
+(44, 1, 18, 'Anderson\'s Booking # 18 Has Been Marked as Arrived.', '', '2024-12-29 17:09:07', '2024-12-29 00:23:55', '2024-12-29 17:09:07'),
+(45, 1, 13, 'Anderson\'s Booking # 13 Has Been Re-pended.', '', '2024-12-30 02:49:19', '2024-12-29 17:09:12', '2024-12-30 02:49:19'),
+(46, 1, 15, 'Anderson\'s Booking # 15 Has Been Re-pended.', '', '2024-12-30 02:49:19', '2024-12-29 17:09:32', '2024-12-30 02:49:19'),
+(47, 1, 18, 'Anderson\'s Booking # 18 Has Been Re-pended.', '', '2024-12-30 02:49:19', '2024-12-29 17:11:37', '2024-12-30 02:49:19'),
+(48, 1, 13, 'A new remark has been added to Anderson\'s Booking # 13. Review the updated remark for further action.', 'Remove Color!', '2024-12-30 02:49:19', '2024-12-29 17:12:15', '2024-12-30 02:49:19'),
+(49, 1, 15, 'A new remark has been added to Anderson\'s Booking # 15. Review the updated remark for further action.', 'No Color!', '2024-12-30 02:49:19', '2024-12-29 17:12:55', '2024-12-30 02:49:19'),
+(50, 1, 13, 'A new remark has been added to Anderson\'s Booking # 13. Review the updated remark for further action.', 'Remove Color', '2024-12-30 02:49:19', '2024-12-29 17:13:05', '2024-12-30 02:49:19'),
+(51, 1, 13, 'Anderson\'s Booking # 13 Has Been Marked as Arrived.', 'Remove Color', '2024-12-30 02:49:19', '2024-12-29 17:34:14', '2024-12-30 02:49:19'),
+(52, 1, 14, 'Anderson\'s Booking # 14 Has Been Marked as Arrived.', 'N/A', '2024-12-30 02:49:19', '2024-12-30 01:20:13', '2024-12-30 02:49:19'),
+(53, 1, 15, 'Anderson\'s Booking # 15 Has Been Marked as Arrived.', 'N/A', '2024-12-30 02:49:19', '2024-12-30 01:34:19', '2024-12-30 02:49:19'),
+(54, 1, 13, 'Anderson\'s Booking # 13 Has Been Marked as Arrived.', 'N/A', '2024-12-30 02:49:19', '2024-12-30 01:34:24', '2024-12-30 02:49:19'),
+(55, 1, 14, 'Anderson\'s Booking # 14 Has Been Marked as Arrived.', 'N/A', '2024-12-30 02:49:19', '2024-12-30 01:34:28', '2024-12-30 02:49:19'),
+(56, 1, 19, 'Anderson\'s Booking # 19 Has Been Marked as Arrived.', 'N/A', '2024-12-30 03:02:05', '2024-12-30 02:54:50', '2024-12-30 03:02:05'),
+(57, 1, 19, 'Anderson\'s Booking # 19 Has Been Marked as Arrived.', 'N/A', '2024-12-30 03:02:05', '2024-12-30 02:54:51', '2024-12-30 03:02:05'),
+(58, 9, 99, 'Booking # 99 Rescheduled by Lack(#9) from (2025-01-02_2025-01-03) to (2025-01-02_2025-01-03)', 'N/A', '2024-12-31 05:33:59', '2024-12-31 05:30:58', '2024-12-31 05:34:00'),
+(59, 9, 99, 'Booking # 99 Rescheduled by Lack(#9) from (2025-01-02_2025-01-03) to (2025-01-02_2025-01-03)', 'N/A', '2024-12-31 05:33:59', '2024-12-31 05:30:59', '2024-12-31 05:34:00'),
+(63, 9, 101, 'Lack\'s Booking # 101 Has Been Re-pended.', 'N/A', '2025-01-03 13:56:19', '2025-01-01 13:34:08', '2025-01-03 13:56:19'),
+(66, 9, 101, 'Lack\'s Booking # 101 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'Fuck You!', '2025-01-03 13:56:19', '2025-01-01 13:34:34', '2025-01-03 13:56:19'),
+(67, 1, 18, 'Anderson\'s Booking # 18 Has Been Marked as Arrived.', 'N/A', '2025-01-03 13:56:19', '2025-01-01 16:58:57', '2025-01-03 13:56:19'),
+(68, 1, 18, 'Anderson\'s Booking # 18 Has Been Re-pended.', 'N/A', '2025-01-03 13:56:19', '2025-01-01 16:59:05', '2025-01-03 13:56:19'),
+(69, 1, 28, 'Anderson\'s Booking # 28 Has Been Marked as Arrived.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 04:49:12', '2025-01-03 13:56:19'),
+(70, 1, 28, 'Anderson\'s Booking # 28 Has Been Re-pended.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 04:55:02', '2025-01-03 13:56:19'),
+(71, 1, 28, 'Anderson\'s Booking # 28 Has Been Marked as Arrived.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 05:09:12', '2025-01-03 13:56:19'),
+(72, 1, 28, 'Anderson\'s Booking # 28 Has Been Marked as Arrived.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 05:09:14', '2025-01-03 13:56:19'),
+(73, 1, 28, 'Anderson\'s Booking # 28 Has Been Re-pended.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 05:09:25', '2025-01-03 13:56:19'),
+(74, 1, 28, 'Anderson\'s Booking # 28 Has Been Re-pended.', 'We have ARRRRIVED!', '2025-01-03 13:56:19', '2025-01-03 05:09:25', '2025-01-03 13:56:19'),
+(75, 9, 99, 'Lack\'s Booking # 99 Has Been Re-pended.', 'N/A', '2025-01-03 13:56:19', '2025-01-03 06:02:02', '2025-01-03 13:56:19'),
+(76, 1, 33, 'Anderson\'s Booking # 33 Has Been Re-pended.', 'Bla', '2025-01-03 13:56:19', '2025-01-03 07:12:12', '2025-01-03 13:56:19'),
+(77, 1, 33, 'Anderson\'s Booking # 33 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'fdsfsd', '2025-01-03 13:56:19', '2025-01-03 07:26:04', '2025-01-03 13:56:19'),
+(78, 1, 33, 'Anderson\'s Booking # 33 Has Been Re-pended.', 'fdsfsd', '2025-01-03 13:56:19', '2025-01-03 07:33:11', '2025-01-03 13:56:19'),
+(79, 9, 99, 'Lack\'s Booking # 99 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'fuck you jack', '2025-01-03 13:56:19', '2025-01-03 07:57:51', '2025-01-03 13:56:19'),
+(80, 9, 99, 'Lack\'s Booking # 99 Has Been Re-pended.', 'fuck you jack', '2025-01-03 13:56:19', '2025-01-03 08:01:45', '2025-01-03 13:56:19'),
+(81, 9, 99, 'Lack\'s Booking # 99 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'fuck off jackk!', '2025-01-03 13:56:19', '2025-01-03 08:03:23', '2025-01-03 13:56:19'),
+(82, 9, 99, 'Lack\'s Booking # 99 Has Been Re-pended.', 'fuck off jackk!', '2025-01-03 13:56:19', '2025-01-03 08:41:55', '2025-01-03 13:56:19'),
+(83, 31, 3, 'Kunde\'s Booking # 3 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dasdsa', '2025-01-03 15:23:10', '2025-01-03 14:47:04', '2025-01-03 15:23:10'),
+(84, 75, 5, 'Funk\'s Booking # 5 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dsadsa', '2025-01-03 15:23:10', '2025-01-03 15:19:12', '2025-01-03 15:23:10'),
+(85, 31, 3, 'Kunde\'s Booking # 3 Has Been Marked as Arrived.', 'dasdsa', '2025-01-03 15:23:10', '2025-01-03 15:19:28', '2025-01-03 15:23:10'),
+(86, 31, 3, 'Kunde\'s Booking # 3 Has Been Marked as Arrived.', 'dasdsa', '2025-01-03 15:23:10', '2025-01-03 15:19:29', '2025-01-03 15:23:10'),
+(87, 31, 3, 'Kunde\'s Booking # 3 Has Been Re-pended.', 'dasdsa', '2025-01-03 16:10:30', '2025-01-03 16:10:25', '2025-01-03 16:10:30'),
+(88, 89, 8, 'Goodwin\'s Booking # 8 Has Been Re-pended.', 'Ut voluptatem modi iste est totam.', '2025-01-03 16:12:17', '2025-01-03 16:12:13', '2025-01-03 16:12:18'),
+(89, 75, 5, 'Funk\'s Booking # 5 Has Been Re-pended.', 'dsadsa', '2025-01-03 17:27:41', '2025-01-03 17:22:30', '2025-01-03 17:27:41'),
+(90, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-03 20:59:56', '2025-01-03 20:41:29', '2025-01-03 20:59:56'),
+(91, 104, 2, 'Walter\'s Booking # 2 Has Been Marked as Arrived.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-03 20:59:56', '2025-01-03 20:41:48', '2025-01-03 20:59:56'),
+(92, 104, 2, 'Walter\'s Booking # 2 Has Been Re-pended.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-03 20:59:56', '2025-01-03 20:47:59', '2025-01-03 20:59:56'),
+(93, 104, 2, 'Walter\'s Booking # 2 Has Been Marked as Arrived.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-03 20:59:56', '2025-01-03 20:48:43', '2025-01-03 20:59:56'),
+(94, 104, 2, 'Walter\'s Booking # 2 Has Been Re-pended.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-03 20:59:56', '2025-01-03 20:50:42', '2025-01-03 20:59:56'),
+(95, 104, 2, 'Walter\'s Booking # 2 Has Been Marked as Arrived.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-03 20:59:56', '2025-01-03 20:52:34', '2025-01-03 20:59:56'),
+(96, 46, 1, 'Torp\'s Booking # 1 Has Been Re-pended.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-03 20:59:56', '2025-01-03 20:54:14', '2025-01-03 20:59:56'),
+(97, 73, 10, 'Schiller\'s Booking # 10 Has Been Re-pended.', 'Et minima earum ea nobis qui aut.', '2025-01-03 20:59:56', '2025-01-03 20:59:47', '2025-01-03 20:59:56'),
+(98, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:09', '2025-01-04 00:30:31'),
+(99, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:11', '2025-01-04 00:30:31'),
+(100, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:13', '2025-01-04 00:30:31'),
+(101, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:14', '2025-01-04 00:30:31'),
+(102, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:16', '2025-01-04 00:30:31'),
+(103, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:17', '2025-01-04 00:30:31'),
+(104, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:09:17', '2025-01-04 00:30:31'),
+(105, 46, 1, 'Torp\'s Booking # 1 Has Been Re-pended.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:11:31', '2025-01-04 00:30:31'),
+(106, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:13:01', '2025-01-04 00:30:31'),
+(107, 75, 5, 'Funk\'s Booking # 5 Has Been Marked as Arrived.', 'dsadsa', '2025-01-04 00:30:30', '2025-01-03 21:13:19', '2025-01-04 00:30:31'),
+(108, 46, 1, 'Torp\'s Booking # 1 Has Been Re-pended.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:21:00', '2025-01-04 00:30:31'),
+(109, 75, 5, 'Funk\'s Booking # 5 Has Been Re-pended.', 'dsadsa', '2025-01-04 00:30:30', '2025-01-03 21:21:04', '2025-01-04 00:30:31'),
+(110, 104, 2, 'Walter\'s Booking # 2 Has Been Re-pended.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-04 00:30:30', '2025-01-03 21:21:07', '2025-01-04 00:30:31'),
+(111, 46, 1, 'Torp\'s Booking # 1 Has Been Marked as Arrived.', 'Perspiciatis earum eum voluptate accusamus et.', '2025-01-04 00:30:30', '2025-01-03 21:33:44', '2025-01-04 00:30:31'),
+(112, 104, 2, 'Walter\'s Booking # 2 Has Been Marked as Arrived.', 'Deleniti aut dolorem ut hic ullam.', '2025-01-04 00:30:30', '2025-01-03 21:33:48', '2025-01-04 00:30:31'),
+(113, 75, 5, 'Funk\'s Booking # 5 Has Been Marked as Arrived.', 'dsadsa', '2025-01-04 00:30:30', '2025-01-03 21:33:51', '2025-01-04 00:30:31'),
+(114, 1, 1, 'sangcap\'s Booking # 1 Has Been Re-pended.', 'Quod consequuntur alias eum unde non sunt.', '2025-01-05 05:47:38', '2025-01-04 14:05:48', '2025-01-05 05:47:39'),
+(115, 22, 4, 'Sta Rosa\'s Booking # 4 Has Been Re-pended.', 'Expedita laboriosam placeat cupiditate odit.', '2025-01-05 05:47:38', '2025-01-04 14:07:13', '2025-01-05 05:47:39'),
+(116, 7, 6, 'Stephenson\'s Booking # 6 Has Been Re-pended.', 'Aut suscipit aut voluptatem quo odio.', '2025-01-05 05:47:38', '2025-01-04 14:11:04', '2025-01-05 05:47:39'),
+(117, 6, NULL, 'Delmar\'s Account # 6 Has been set to Suspended.', 'N/A', '2025-01-05 05:47:38', '2025-01-05 04:27:07', '2025-01-05 05:47:39'),
+(118, 6, NULL, 'Delmar\'s Account # 6 Has been set to Active.', 'N/A', '2025-01-05 05:47:38', '2025-01-05 04:27:13', '2025-01-05 05:47:39'),
+(119, 6, NULL, 'User (#6) has been deleted as it was found to be in violation of our policies. If you believe this was a mistake, contact +63-951-582-2030 for assistance.', 'You suck!', '2025-01-05 05:47:38', '2025-01-05 05:05:58', '2025-01-05 05:47:39'),
+(120, 11, 7, 'anoni\'s Booking # 7 Has Been Re-pended.', 'Velit et tempora quis ut repellat consequatur eaque.', '2025-01-05 05:47:38', '2025-01-05 05:21:36', '2025-01-05 05:47:39'),
+(121, 22, 8, 'Sta Rosa\'s Booking # 8 Has Been Re-pended.', 'Nostrum in magni sint ut.', '2025-01-05 05:47:38', '2025-01-05 05:36:50', '2025-01-05 05:47:39'),
+(122, 7, NULL, 'Stephenson\'s Account # 7 Has been set to Verified.', 'N/A', '2025-01-05 09:32:17', '2025-01-05 07:16:30', '2025-01-05 09:32:17'),
+(123, 7, NULL, 'Stephenson\'s Account # 7 Has been set to Verified.', 'N/A', '2025-01-05 09:32:17', '2025-01-05 07:19:31', '2025-01-05 09:32:17'),
+(124, 7, NULL, 'Stephenson\'s Account # 7 Has been updated.', 'N/A', '2025-01-05 09:32:17', '2025-01-05 09:12:05', '2025-01-05 09:32:17'),
+(125, 14, 10, 'A new remark has been added to co\'s Booking # 10. Review the updated remark for further action.', 'Update Works! Along with Remarks!', '2025-01-05 09:54:55', '2025-01-05 09:38:45', '2025-01-05 09:54:55'),
+(126, 11, 13, 'A new remark has been added to anoni\'s Booking # 13. Review the updated remark for further action.', 'rem', '2025-01-05 09:54:55', '2025-01-05 09:44:08', '2025-01-05 09:54:55'),
+(127, 14, 43, 'A new remark has been added to co\'s Booking # 43. Review the updated remark for further action.', 'wtf', '2025-01-05 09:54:55', '2025-01-05 09:49:42', '2025-01-05 09:54:55'),
+(128, 23, 769, 'sangcap\'s Booking # 769 Has Been Re-pended.', 'Sit cum ea numquam exercitationem.', '2025-01-06 15:23:07', '2025-01-06 15:11:37', '2025-01-06 15:23:07'),
+(129, 26, 2, 'Sta Rosa\'s Booking # 2 Has Been Marked as Arrived.', 'Aut placeat voluptas debitis sit saepe nam inventore.', '2025-01-07 06:41:20', '2025-01-06 18:41:32', '2025-01-07 06:41:20'),
+(130, 26, 2, 'Sta Rosa\'s Booking # 2 Has Been Re-pended.', 'Aut placeat voluptas debitis sit saepe nam inventore.', '2025-01-07 06:41:20', '2025-01-06 18:41:50', '2025-01-07 06:41:20'),
+(131, 24, 774, 'sangcap\'s Booking # 774 Has Been Re-pended.', 'Est quo voluptatum in dolores.', NULL, '2025-01-07 12:05:29', '2025-01-07 12:05:29'),
+(132, 15, 8, 'Fina\'s Booking # 8 Has Been Re-pended.', 'Et quisquam at et nisi consectetur porro voluptates.', NULL, '2025-01-14 05:29:06', '2025-01-14 05:29:06'),
+(133, 26, 2, 'Sta Rosa\'s Booking # 2 Has Been Marked as Arrived.', 'Aut placeat voluptas debitis sit saepe nam inventore.', NULL, '2025-01-14 06:17:54', '2025-01-14 06:17:54'),
+(134, 20, 1004, 'Booking # 1004 Rescheduled by Carandang(#20) from (2025-01-18_2025-01-22) to (2025-01-18_2025-01-22)', 'N/A', NULL, '2025-01-14 23:02:05', '2025-01-14 23:02:05'),
+(135, 20, 1004, 'Booking # 1004 Rescheduled by Carandang(#20) from (2025-01-18_2025-01-22) to (2025-01-18_2025-01-22)', 'N/A', NULL, '2025-01-14 23:02:06', '2025-01-14 23:02:06'),
+(136, 15, 776, 'Fina\'s Booking # 776 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dsada', NULL, '2025-01-15 02:31:12', '2025-01-15 02:31:12'),
+(137, 14, 11, 'co\'s Booking # 11 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dsad', NULL, '2025-01-15 02:32:23', '2025-01-15 02:32:23'),
+(138, 16, 13, 'A new remark has been added to mamisa\'s Booking # 13. Review the updated remark for further action.', 'Voluptatem et ut molestiae minima dsadsa', NULL, '2025-01-15 02:34:30', '2025-01-15 02:34:30'),
+(139, 26, 2, 'Sta Rosa\'s Booking # 2 Has Been Re-pended.', 'Aut placeat voluptas debitis sit saepe nam inventore.', NULL, '2025-01-15 02:44:59', '2025-01-15 02:44:59'),
+(140, 26, 530, 'A new remark has been added to Sta Rosa\'s Booking # 530. Review the updated remark for further action.', 'Sit aut ea nemo et qui voluptas sint. dsa', NULL, '2025-01-15 07:36:04', '2025-01-15 07:36:04'),
+(141, 13, 786, 'Anduman\'s Booking # 786 Has Been Re-pended.', 'Autem minima consectetur excepturi eos doloremque.', NULL, '2025-01-16 09:48:20', '2025-01-16 09:48:20'),
+(142, 13, 786, 'Anduman\'s Booking # 786 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'Stupid Choice!', NULL, '2025-01-16 09:48:37', '2025-01-16 09:48:37'),
+(143, 9, 787, 'A new remark has been added to El Mesa\'s Booking # 787. Review the updated remark for further action.', 'STUPID COLOR! STOOOPEEID!', NULL, '2025-01-16 10:12:18', '2025-01-16 10:12:18'),
+(144, 20, 1005, 'Carandang\'s Booking # 1005 status has been updated to an unknown state.', 'N/A', NULL, '2025-02-01 06:43:37', '2025-02-01 06:43:37'),
+(145, 20, 1005, 'Carandang\'s Booking # 1005 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'Stupid Booking\r\nyes', NULL, '2025-02-01 06:43:55', '2025-02-01 06:43:55'),
+(146, 20, 1006, 'Carandang\'s Booking # 1006 has been cancelled. We are sorry for the inconvenience. Please reach out if you need help or clarification.', 'dsa', NULL, '2025-02-01 12:02:23', '2025-02-01 12:02:23'),
+(147, 9, NULL, 'El Mesa\'s Account # 9 Has been set to Suspended.', 'N/A', NULL, '2025-02-02 09:52:38', '2025-02-02 09:52:38'),
+(148, 1, NULL, 'sangcap\'s Account # 1 Has been set to Verified.', 'N/A', NULL, '2025-02-02 09:53:01', '2025-02-02 09:53:01'),
+(149, 9, NULL, 'El Mesa\'s Account # 9 Has been set to Verified.', 'N/A', NULL, '2025-02-02 09:53:03', '2025-02-02 09:53:03');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `boats`
+--
+
+CREATE TABLE `boats` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `bookings`
 --
 
@@ -928,9 +1141,490 @@ INSERT INTO `bookings` (`id`, `userid`, `accommodation`, `arrival`, `departure`,
 (1006, 20, 'Dona Choleng Camping Resort', '2025-02-01', '2025-02-21', '5+ Nights', 0, 0, 2, 2, 0, 2, 2, 0, 0, 2, 'Public Vehicle', 'Jeepney', 'Public Boat', 'Leisure', 'accproof-1006.png', 'boatproof-1006.png', 'N/A', 'CANCELLED', 'dsa', 160, 64, 0, '', '2025-02-01 11:18:05', '2025-02-01 12:02:23'),
 (1007, 29, 'Dona Choleng Camping Resort', '2025-05-18', '2025-05-27', '5+ Nights', 0, 1, 0, 1, 0, 1, 0, 0, 1, 0, 'Private Vehicle', 'Metro Park Cagbalete Parking', 'Public Boat', 'Leisure', 'accproof-1007.png', 'boatproof-1007.png', 'parkproof-1007.png', 'PRE-ARRIVAL', 'N/A', 80, 0, 80, NULL, '2025-05-17 19:08:55', '2025-05-17 19:08:55');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cache`
+--
+
+CREATE TABLE `cache` (
+  `key` varchar(255) NOT NULL,
+  `value` mediumtext NOT NULL,
+  `expiration` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cache`
+--
+
+INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
+('mauban_tourism_cache_raxx@gmail.com|127.0.0.1', 'i:2;', 1747504697),
+('mauban_tourism_cache_raxx@gmail.com|127.0.0.1:timer', 'i:1747504697;', 1747504697),
+('mauban_tourism_cache_raxx@yahoo.com|127.0.0.1', 'i:2;', 1747504715),
+('mauban_tourism_cache_raxx@yahoo.com|127.0.0.1:timer', 'i:1747504715;', 1747504715);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cache_locks`
+--
+
+CREATE TABLE `cache_locks` (
+  `key` varchar(255) NOT NULL,
+  `owner` varchar(255) NOT NULL,
+  `expiration` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `failed_jobs`
+--
+
+CREATE TABLE `failed_jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `uuid` varchar(255) NOT NULL,
+  `connection` text NOT NULL,
+  `queue` text NOT NULL,
+  `payload` longtext NOT NULL,
+  `exception` longtext NOT NULL,
+  `failed_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `images`
+--
+
+CREATE TABLE `images` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `accid` int(11) NOT NULL,
+  `sequence` int(11) NOT NULL,
+  `name` varchar(254) NOT NULL,
+  `uploaddate` date NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `images`
+--
+
+INSERT INTO `images` (`id`, `accid`, `sequence`, `name`, `uploaddate`, `created_at`, `updated_at`) VALUES
+(1, 2, 1, '21.jpg', '2025-01-08', '2025-01-08 02:32:05', '2025-01-08 02:32:05'),
+(4, 4, 1, '41.webp', '2025-02-16', '2025-02-16 11:38:23', '2025-02-16 11:38:23'),
+(5, 4, 2, '42.webp', '2025-02-16', '2025-02-16 11:38:25', '2025-02-16 11:38:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobs`
+--
+
+CREATE TABLE `jobs` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `queue` varchar(255) NOT NULL,
+  `payload` longtext NOT NULL,
+  `attempts` tinyint(3) UNSIGNED NOT NULL,
+  `reserved_at` int(10) UNSIGNED DEFAULT NULL,
+  `available_at` int(10) UNSIGNED NOT NULL,
+  `created_at` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `job_batches`
+--
+
+CREATE TABLE `job_batches` (
+  `id` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `total_jobs` int(11) NOT NULL,
+  `pending_jobs` int(11) NOT NULL,
+  `failed_jobs` int(11) NOT NULL,
+  `failed_job_ids` longtext NOT NULL,
+  `options` mediumtext DEFAULT NULL,
+  `cancelled_at` int(11) DEFAULT NULL,
+  `created_at` int(11) NOT NULL,
+  `finished_at` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `migrations`
+--
+
+CREATE TABLE `migrations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `migration` varchar(255) NOT NULL,
+  `batch` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `migrations`
+--
+
+INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
+(1, '0001_01_01_000001_create_cache_table', 1),
+(2, '0001_01_01_000002_create_jobs_table', 1),
+(3, '0001_01_02_000000_create_users_table', 1),
+(4, '2024_07_08_121534_create_accommodations_table', 1),
+(5, '2024_07_09_113357_create_bookings_table', 1),
+(6, '2024_07_11_153549_create_roles_table', 1),
+(7, '2024_09_16_070942_create_images_table', 2),
+(8, '2024_10_21_124237_create_parkings_table', 3),
+(9, '2024_10_21_124246_create_boats_table', 3),
+(10, '2024_10_26_073059_create_watchers_table', 4),
+(11, '2024_12_08_093834_create_notifications_table', 5),
+(12, '2024_12_19_212627_activities', 6),
+(13, '2024_12_20_093834_create_notifications_table', 7),
+(14, '2024_12_20_212627_activities', 8),
+(15, '2024_12_20_223028_create_notifications_table', 8),
+(16, '2024_12_20_223029_create_notifications_table', 9),
+(17, '2014_10_12_100000_create_password_resets_table', 10),
+(18, '2024_12_26_070344_create_notify_table', 10),
+(19, '2024_12_26_155125_create_notifies_table', 11),
+(20, '2024_12_30_123603_create_parkings_table', 12),
+(21, '2024_12_30_123608_create_boats_table', 12),
+(22, '2025_01_01_185539_create_reports_table', 12),
+(23, '2024_09_16_070932_create_images_table', 13),
+(24, '2025_02_05_233050_create_visit_table', 14);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifications`
+--
+
+CREATE TABLE `notifications` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `type` varchar(255) NOT NULL,
+  `notifiable_type` varchar(255) NOT NULL,
+  `notifiable_id` bigint(20) UNSIGNED NOT NULL,
+  `data` text NOT NULL,
+  `read_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `notifies`
+--
+
+CREATE TABLE `notifies` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `userid` int(11) NOT NULL,
+  `bookid` int(11) DEFAULT NULL,
+  `adminid` bigint(20) DEFAULT NULL,
+  `type` varchar(255) DEFAULT NULL,
+  `msg` varchar(512) NOT NULL,
+  `remark` varchar(255) DEFAULT NULL,
+  `read_at` timestamp NULL DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `notifies`
+--
+
+INSERT INTO `notifies` (`id`, `userid`, `bookid`, `adminid`, `type`, `msg`, `remark`, `read_at`, `created_at`, `updated_at`) VALUES
+(1, 1, 11, NULL, NULL, 'Your booking (#11) has been deleted as it was found to be in violation of our policies. Please review our terms and conditions for more information. If you believe this was a mistake, contact our support team for assistance.', NULL, '2025-02-15 12:55:01', '2024-12-28 19:17:21', '2025-02-15 12:55:01'),
+(2, 2, 99, NULL, NULL, 'Lack (#9) has created a new booking (#99). Please review.', NULL, '2025-01-03 13:56:25', '2024-12-31 05:23:06', '2025-01-03 13:56:25'),
+(3, 7, 99, NULL, NULL, 'Lack (#9) has created a new booking (#99). Please review.', NULL, '2025-01-03 13:56:25', '2024-12-31 05:23:07', '2025-01-03 13:56:25'),
+(4, 2, 100, NULL, NULL, 'Lack (#9) has created a new booking (#100). Please review.', NULL, '2025-01-03 13:56:25', '2024-12-31 08:33:57', '2025-01-03 13:56:25'),
+(5, 7, 100, NULL, NULL, 'Lack (#9) has created a new booking (#100). Please review.', NULL, '2025-01-03 13:56:25', '2024-12-31 08:33:57', '2025-01-03 13:56:25'),
+(6, 2, 101, NULL, NULL, 'Lack (#9) has created a new booking (#101). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 06:09:43', '2025-01-03 13:56:25'),
+(7, 7, 101, NULL, NULL, 'Lack (#9) has created a new booking (#101). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 06:09:43', '2025-01-03 13:56:25'),
+(8, 2, 102, NULL, NULL, 'Lack (#9) has created a new booking (#102). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 06:26:14', '2025-01-03 13:56:25'),
+(9, 7, 102, NULL, NULL, 'Lack (#9) has created a new booking (#102). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 06:26:14', '2025-01-03 13:56:25'),
+(10, 2, 106, NULL, NULL, 'Lack (#9) has created a new booking (#106). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 07:58:10', '2025-01-03 13:56:25'),
+(11, 7, 106, NULL, NULL, 'Lack (#9) has created a new booking (#106). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 07:58:10', '2025-01-03 13:56:25'),
+(12, 2, 107, NULL, NULL, 'Lack (#9) has created a new booking (#107). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 08:22:00', '2025-01-03 13:56:25'),
+(13, 7, 107, NULL, NULL, 'Lack (#9) has created a new booking (#107). Please review.', NULL, '2025-01-03 13:56:25', '2025-01-01 08:22:00', '2025-01-03 13:56:25'),
+(14, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:35:56', '2025-01-05 05:48:43'),
+(15, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:38:31', '2025-01-05 05:48:43'),
+(16, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:27', '2025-01-05 05:48:43'),
+(17, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:27', '2025-01-05 05:48:43'),
+(18, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:27', '2025-01-05 05:48:43'),
+(19, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:27', '2025-01-05 05:48:43'),
+(20, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:44', '2025-01-05 05:48:43'),
+(21, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:44', '2025-01-05 05:48:43'),
+(22, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:44', '2025-01-05 05:48:43'),
+(23, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:39:44', '2025-01-05 05:48:43'),
+(24, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-02-15 12:55:01', '2025-01-05 04:40:14', '2025-02-15 12:55:01'),
+(25, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:14', '2025-01-05 05:48:43'),
+(26, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:14', '2025-01-05 05:48:43'),
+(27, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:14', '2025-01-05 05:48:43'),
+(28, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:38', '2025-01-05 05:48:43'),
+(29, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:38', '2025-01-05 05:48:43'),
+(30, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:38', '2025-01-05 05:48:43'),
+(31, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:40:38', '2025-01-05 05:48:43'),
+(32, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:22', '2025-01-05 05:48:43'),
+(33, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:22', '2025-01-05 05:48:43'),
+(34, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:22', '2025-01-05 05:48:43'),
+(35, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:22', '2025-01-05 05:48:43'),
+(36, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:41', '2025-01-05 05:48:43'),
+(37, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:41', '2025-01-05 05:48:43'),
+(38, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:41', '2025-01-05 05:48:43'),
+(39, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to Admin.', 'dan', '2025-01-05 05:48:43', '2025-01-05 04:41:42', '2025-01-05 05:48:43'),
+(40, 6, NULL, NULL, NULL, 'Delmar\'s Account # 6 Has been Changed to User .', 'yo', '2025-01-05 05:48:43', '2025-01-05 04:43:21', '2025-01-05 05:48:43'),
+(41, 1, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to User .', 'yo', '2025-01-05 05:48:43', '2025-01-05 04:43:21', '2025-01-05 05:48:43'),
+(42, 20, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to User .', 'yo', '2025-01-05 05:48:43', '2025-01-05 04:43:21', '2025-01-05 05:48:43'),
+(43, 21, NULL, 20, NULL, 'Delmar\'s Account # 6 Has been Changed to User .', 'yo', '2025-01-05 05:48:43', '2025-01-05 04:43:21', '2025-01-05 05:48:43'),
+(44, 6, 12, NULL, NULL, 'Booking (#12) has been deleted as it was found to be in violation of our policies. If you believe this was a mistake, contact +63-951-582-2030 for assistance.', NULL, '2025-01-05 05:50:57', '2025-01-05 05:49:34', '2025-01-05 05:50:57'),
+(45, 1, 1001, NULL, NULL, 'Carandang (#20) has created a new booking (#1001). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-11 18:20:00', '2025-02-15 12:55:01'),
+(46, 20, 1001, NULL, NULL, 'Carandang (#20) has created a new booking (#1001). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-11 18:20:00', '2025-02-15 12:55:01'),
+(47, 21, 1001, NULL, NULL, 'Carandang (#20) has created a new booking (#1001). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-11 18:20:01', '2025-02-15 12:55:01'),
+(48, 20, 1001, NULL, NULL, 'Booking (#1001) has been deleted as it violates our policies. If mistaken, contact +63-951-582-2030 for assistance.', NULL, '2025-02-15 12:55:01', '2025-01-12 00:24:24', '2025-02-15 12:55:01'),
+(49, 1, 1002, NULL, NULL, 'Tster (#27) has created a new booking (#1002). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-12 22:56:36', '2025-02-15 12:55:01'),
+(50, 20, 1002, NULL, NULL, 'Tster (#27) has created a new booking (#1002). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-12 22:56:36', '2025-02-15 12:55:01'),
+(51, 21, 1002, NULL, NULL, 'Tster (#27) has created a new booking (#1002). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-12 22:56:36', '2025-02-15 12:55:01'),
+(52, 20, NULL, NULL, NULL, 'Carandang\'s Account # 20 Has been Changed to User .', 'Get Demoted Son!', '2025-02-15 12:55:01', '2025-01-14 14:33:53', '2025-02-15 12:55:01'),
+(53, 1, NULL, 20, NULL, 'Carandang\'s Account # 20 Has been Changed to User .', 'Get Demoted Son!', '2025-02-15 12:55:01', '2025-01-14 14:33:53', '2025-02-15 12:55:01'),
+(54, 20, NULL, 20, NULL, 'Carandang\'s Account # 20 Has been Changed to User .', 'Get Demoted Son!', '2025-02-15 12:55:01', '2025-01-14 14:33:53', '2025-02-15 12:55:01'),
+(55, 21, NULL, 20, NULL, 'Carandang\'s Account # 20 Has been Changed to User .', 'Get Demoted Son!', '2025-02-15 12:55:01', '2025-01-14 14:33:53', '2025-02-15 12:55:01'),
+(56, 1, 1003, NULL, NULL, 'Carandang (#20) has created a new booking (#1003). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-14 18:13:48', '2025-02-15 12:55:01'),
+(57, 21, 1003, NULL, NULL, 'Carandang (#20) has created a new booking (#1003). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-14 18:13:48', '2025-02-15 12:55:01'),
+(58, 1, 1004, NULL, NULL, 'Carandang (#20) has created a new booking (#1004). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-14 22:53:50', '2025-02-15 12:55:01'),
+(59, 21, 1004, NULL, NULL, 'Carandang (#20) has created a new booking (#1004). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-14 22:53:50', '2025-02-15 12:55:01'),
+(60, 16, 439, NULL, NULL, 'Booking (#439) has been deleted as it violates our policies. If mistaken, contact +63-951-582-2030 for assistance.', NULL, '2025-02-15 12:55:01', '2025-01-15 02:35:52', '2025-02-15 12:55:01'),
+(61, 1, 1005, NULL, NULL, 'Carandang (#20) has created a new booking (#1005). Please review.', NULL, '2025-02-15 12:55:01', '2025-01-16 06:44:18', '2025-02-15 12:55:01'),
+(62, 1, 1006, NULL, NULL, 'Carandang (#20) has created a new booking (#1006). Please review.', NULL, '2025-02-15 12:55:01', '2025-02-01 11:18:08', '2025-02-15 12:55:01'),
+(63, 20, 1006, NULL, NULL, 'Carandang (#20) has created a new booking (#1006). Please review.', NULL, '2025-02-15 12:55:01', '2025-02-01 11:18:08', '2025-02-15 12:55:01'),
+(64, 27, 1006, NULL, NULL, 'Carandang (#20) has created a new booking (#1006). Please review.', NULL, '2025-02-15 12:55:01', '2025-02-01 11:18:08', '2025-02-15 12:55:01'),
+(65, 1, 1007, NULL, NULL, 'Carandang (#29) has created a new booking (#1007). Please review.', NULL, NULL, '2025-05-17 19:08:55', '2025-05-17 19:08:55'),
+(66, 20, 1007, NULL, NULL, 'Carandang (#29) has created a new booking (#1007). Please review.', NULL, NULL, '2025-05-17 19:08:55', '2025-05-17 19:08:55'),
+(67, 27, 1007, NULL, NULL, 'Carandang (#29) has created a new booking (#1007). Please review.', NULL, NULL, '2025-05-17 19:08:55', '2025-05-17 19:08:55');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `parkings`
+--
+
+CREATE TABLE `parkings` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_resets`
+--
+
+CREATE TABLE `password_resets` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `password_reset_tokens`
+--
+
+CREATE TABLE `password_reset_tokens` (
+  `email` varchar(255) NOT NULL,
+  `token` varchar(255) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `reports`
+--
+
+CREATE TABLE `reports` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `report_date` date NOT NULL,
+  `report_type` varchar(255) NOT NULL,
+  `total_bookings` int(11) NOT NULL,
+  `total_foreigners` int(11) NOT NULL,
+  `total_filipinos` int(11) NOT NULL,
+  `total_maubanins` int(11) NOT NULL,
+  `total_male` int(11) NOT NULL,
+  `total_female` int(11) NOT NULL,
+  `total_visitors` int(11) NOT NULL,
+  `total_specialneeds` int(11) NOT NULL,
+  `total_zero_to_7` int(11) NOT NULL,
+  `total_13_to_50` int(11) NOT NULL,
+  `total_above_60` int(11) NOT NULL,
+  `total_travelmeans` varchar(255) NOT NULL,
+  `total_parking` varchar(255) NOT NULL,
+  `total_boating` varchar(255) NOT NULL,
+  `status` enum('PENDING','ARRIVED','CANCELLED','RESCHEDULED','DELINQUENT') NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `roles`
+--
+
+CREATE TABLE `roles` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `active` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `roles`
+--
+
+INSERT INTO `roles` (`id`, `name`, `active`, `created_at`, `updated_at`) VALUES
+(1, 'user', 1, '2024-09-18 06:50:12', '2024-09-18 06:50:12'),
+(797, 'owner', 1, '2024-09-18 06:52:12', '2024-09-18 06:52:12'),
+(979, 'admin', 1, '2024-09-18 06:50:52', '2024-09-18 06:50:52');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sessions`
+--
+
+CREATE TABLE `sessions` (
+  `id` varchar(255) NOT NULL,
+  `user_id` bigint(20) UNSIGNED DEFAULT NULL,
+  `ip_address` varchar(45) DEFAULT NULL,
+  `user_agent` text DEFAULT NULL,
+  `payload` longtext NOT NULL,
+  `last_activity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE `users` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `mname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `gender` varchar(7) NOT NULL,
+  `bdate` date NOT NULL,
+  `contactno` varchar(22) NOT NULL,
+  `country` varchar(127) NOT NULL,
+  `region` varchar(127) NOT NULL,
+  `email` varchar(254) NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
+  `password` varchar(254) NOT NULL,
+  `role_id` bigint(20) NOT NULL DEFAULT 1,
+  `status` varchar(254) NOT NULL DEFAULT 'Unverified',
+  `remember_token` varchar(100) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `mname`, `lname`, `gender`, `bdate`, `contactno`, `country`, `region`, `email`, `email_verified_at`, `password`, `role_id`, `status`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'angelo', 'E.', 'sangcap', 'Male', '2002-06-06', '09053730919', 'PHILIPPINES', '(IV-A) CALABARZON', 'sangcapangelo02@gmail.com', '2025-02-02 09:52:59', '$2y$12$4EiZCVbeZouzLkLPg5nufey7QCr/tyvRtrRDDHzco4g09ThbG6HQ2', 979, 'Verified', 'desjuP6YFfeLXz88DLs2B1vOCT8oB2MDyMGXxiGPoFvmSQkJZZ6FqoexdP8Y', '2024-12-27 06:22:37', '2025-02-02 09:52:59'),
+(7, 'Nash', 'E.', 'Stephenson', 'Male', '2002-01-12', '0987654231', 'MAUBAN', '(IV-A) CALABARZON', 'nasipi3462@pofmagic.com', '2025-01-05 07:19:31', '$2y$12$qe01nTRjAZNoES277holr.us7kRHxACDSBqoVMoL.S30hJOoMI5JG', 1, 'Verified', NULL, '2024-12-27 15:03:06', '2025-01-05 07:19:31'),
+(9, 'Vanessa', 'E.', 'El Mesa', 'Female', '2000-06-27', '0999999999', 'INTERNATIONAL', 'INTERNATIONAL', 'v9ozcljc4g@qejjyl.com', '2025-02-02 09:53:03', '$2y$12$Rh4zWhYCa03SgDEPYmP9IedXXawQv2C3YSKtEPG33pYbw7ASEpXZe', 1, 'Verified', NULL, '2024-12-27 15:40:08', '2025-02-02 09:53:03'),
+(10, 'Jomer', 'E.', 'Simpson', 'Male', '1992-07-01', '09872346574', 'PHILIPPINES', '(XI) DAVAO', 'jomesib744@matmayer.com', '2024-12-28 03:12:01', '$2y$12$ypckYUWu.RmYBbkKGKMwMeU2IGS5K0m3jOCWcjUQ0YWNpl72E2HXm', 1, 'Active', NULL, '2024-12-28 03:11:44', '2024-12-28 03:12:01'),
+(11, 'timona', 'E.', 'anoni', 'Male', '2022-12-29', '09123456789', 'PHILIPPINES', '(II) CAGAYAN', 'timona8860@pofmagic.com', '2024-12-28 04:06:39', '$2y$12$yjYuYHFpBOW2TNIEHCYME.ptZMVK.K0F7rUoElVbEEZexNGGmSsHi', 1, 'Active', NULL, '2024-12-28 04:06:13', '2024-12-28 04:06:39'),
+(12, 'Olivia', 'E.', 'Rodder', 'Female', '1999-03-27', '09123748593', 'INTERNATIONAL', 'INTERNATIONAL', '0y4myanj5j@vwhins.com', '2024-12-28 04:07:33', '$2y$12$WKiEPx7BoYZyX6LQnG2I1umShPKPwhwYw62QHcP1.kFF5RC0.mQSK', 1, 'Active', NULL, '2024-12-28 04:07:14', '2024-12-28 04:07:33'),
+(13, 'Kumar', 'E.', 'Anduman', 'Male', '2002-01-19', '0917485682', 'PHILIPPINES', 'NCR', 'kixekifu@azuretechtalk.net', '2024-12-28 04:10:58', '$2y$12$5hisQnbKAdDx5KNpd45mQOZy6IXUJ0edfmhQV3fFfP1Gugq9WLu1C', 1, 'Active', NULL, '2024-12-28 04:10:45', '2024-12-28 04:10:58'),
+(14, 'Seira', 'E.', 'co', 'Female', '2013-02-06', '09053730919', 'PHILIPPINES', '(XIII) CARAGA', 'pejico6207@pofmagic.com', '2024-12-28 04:11:48', '$2y$12$vrDtUWLGkgIvKgqUPq4iZuylNhtzp0hs3hulnuh0q0viOY8OUMzym', 1, 'Active', NULL, '2024-12-28 04:11:29', '2024-12-28 04:15:21'),
+(15, 'Farah', 'E.', 'Fina', 'Female', '2003-07-09', '091827475834', 'MAUBAN', '(IV-A) CALABARZON', 'famlalefya@gufum.com', '2024-12-28 04:16:29', '$2y$12$lYwUXRXUpKqJefku1iXlrOCo7Pk7nG.LnE5lbiUBq78ZeoxzrjVRe', 1, 'Active', NULL, '2024-12-28 04:16:13', '2024-12-28 04:16:29'),
+(16, 'leira', 'E.', 'mamisa', 'Female', '2000-06-06', '563849582', 'INTERNATIONAL', 'INTERNATIONAL', 'yosepaw188@pofmagic.com', '2024-12-28 04:17:09', '$2y$12$VujQDwXDCq4JSBHQX9p44uZGD09k/hslnuiCM2AA44KKA9THrzFpi', 1, 'Active', NULL, '2024-12-28 04:16:49', '2024-12-28 04:17:09'),
+(17, 'John', 'E.', 'Curtis', 'Male', '1997-09-01', '09182736453', 'MAUBAN', '(IV-A) CALABARZON', 'curlew6901@drivz.net', '2024-12-28 04:25:21', '$2y$12$uTCdUmcIFfO.S6mAXQlj8e6bm2.paVUNG4hCxn74X.73zNYjjvr3u', 1, 'Active', NULL, '2024-12-28 04:25:05', '2024-12-28 04:25:21'),
+(18, 'Barbara', 'E.', 'Christie', 'Female', '2003-03-11', '09187586328', 'INTERNATIONAL', 'INTERNATIONAL', '1580birgitta@freesourcecodes.com', '2024-12-28 04:53:35', '$2y$12$D.nJv1sxj8Vhbvos3vFE7O9v.hXOMoeN.W/GUyFZC/tPpq0CW7/ly', 1, 'Active', NULL, '2024-12-28 04:39:18', '2024-12-28 04:53:35'),
+(20, 'Raxx', 'E.', 'Carandang', 'Male', '2000-01-09', '09182938458', 'PHILIPPINES', '(XI) DAVAO', 'raxx109@gmail.com', '2024-12-29 23:59:54', '$2y$12$EoxU4o2hSBdny2IkqlTbUeHNbUWTHn7jBFUZFCocKRfjV01W5cDCm', 979, 'Active', NULL, '2024-12-29 23:53:13', '2025-01-14 14:33:53'),
+(21, 'Shaira', 'E.', 'Sta Rosa', 'Female', '2002-02-14', '+63991032720', 'PHILIPPINES', '(IV-A) CALABARZON', 'pesiganshairamae@gmail.com', '2025-01-02 06:35:19', '$2y$12$IQ6.MrVGRqB1lxKvQ00gxuuknmfN.lcxKyhtkNqorT4h1YlTGYBe6', 1, 'Active', NULL, '2025-01-02 05:39:58', '2025-01-02 06:35:19'),
+(22, 'Shaira', 'E.', 'Sta Rosa', 'Female', '2002-02-01', '+63991032720', 'PHILIPPINES', '(IV-A) CALABARZON', 'shairapstarosa@gmail.com', NULL, '$2y$12$1A29LIFSo3K3Av7dnxo8LeDSDtpXyzflHSFHgd6.y5phAlnpOj9.2', 1, 'Active', NULL, '2025-01-02 05:42:51', '2025-01-02 05:42:51'),
+(23, 'angelo', 'E.', 'sangcap', 'Male', '2002-06-06', '+639053730919', 'MAUBAN', '(IV-A) CALABARZON', 'sangcapangelo03@gmail.com', NULL, '$2y$12$kRaeK.NNHISw6zVZATMX1u.KPN21g6gIV3lSaLB.N562m9aloFbAa', 1, 'Active', NULL, '2025-01-02 05:44:45', '2025-01-02 05:44:45'),
+(24, 'angelo', 'E.', 'sangcap', 'Male', '2002-06-06', '+639053730919', 'MAUBAN', '(IV-A) CALABARZON', 'sangcapangelo04@gmail.com', '2025-01-02 05:47:01', '$2y$12$vsoO4SubKLDF4sYwB30XBubTvr9oWxO9dgbm5hDBRK4t3FcAAHHIi', 1, 'Active', NULL, '2025-01-02 05:45:50', '2025-01-02 05:47:01'),
+(25, 'Shaira', 'E.', 'Sta Rosa', 'Female', '2002-02-01', '+63991032720', 'PHILIPPINES', '(IV-A) CALABARZON', 'shairapesiganstarosa@gmail.com', NULL, '$2y$12$DPNGNi3TIQCwySh2QFjEpO0NagJ9AAB9UkjzOQuayVvx2uWvEf5am', 1, 'Active', NULL, '2025-01-02 05:46:39', '2025-01-02 05:46:39'),
+(26, 'Shaira', 'E.', 'Sta Rosa', 'Female', '2003-01-02', '+63991032720', 'PHILIPPINES', '(I) ILOCOS', 'shairamae@gmail.com', NULL, '$2y$12$Gv.1L/R0/1FGlj5bhGpSa.rL9GCXeS5Zj1qqG0vG/fhDY7Um4dB9O', 1, 'Active', NULL, '2025-01-02 06:22:41', '2025-01-02 06:22:41'),
+(27, 'Test', 'O.', 'Tster', 'Male', '1992-03-05', '+6391234567892', 'PHILIPPINES', 'NCR', 'test@gmail.com', '2025-01-12 21:49:42', '$2y$12$FQwbAgSDrVuroOoq6buategkHUfdny403oAp9nJBKYdH3IkWFKSzm', 797, 'Unverified', NULL, '2025-01-10 00:25:51', '2025-01-10 00:25:51'),
+(28, 'Raxx', 'R.', 'Carandang', 'Male', '1992-02-13', '+97157283252', 'PHILIPPINES', 'CAR', 'raxx@yahoo.com', NULL, '$2y$12$PGWfDbSgHiqiKQ/eqMgbluks6/AcSdRp06BFhv0acLFzo2vI.yEt.', 1, 'Unverified', NULL, '2025-05-17 18:07:52', '2025-05-17 18:07:52'),
+(29, 'Raxx', 'a', 'Carandang', 'Male', '1992-02-13', '+63123456789', 'PHILIPPINES', '(I) ILOCOS', 'raxx1@yahoo.com', NULL, '$2y$12$8MBT/Kp8nuhHzptJoqJSTO48dX/xn/NIIhJm7lsiy5YEC1cP0aCu.', 1, 'Unverified', NULL, '2025-05-17 18:52:25', '2025-05-17 18:52:25');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visits`
+--
+
+CREATE TABLE `visits` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `totalwebvisitors` int(11) NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `visits`
+--
+
+INSERT INTO `visits` (`id`, `totalwebvisitors`, `created_at`, `updated_at`) VALUES
+(1, 33, '2025-02-05 15:41:56', '2025-05-17 15:30:18');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `watchers`
+--
+
+CREATE TABLE `watchers` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(254) NOT NULL,
+  `total` int(11) NOT NULL DEFAULT 0,
+  `totalupdates` int(11) NOT NULL DEFAULT 0,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `watchers`
+--
+
+INSERT INTO `watchers` (`id`, `name`, `total`, `totalupdates`, `created_at`, `updated_at`) VALUES
+(1, 'users', 4, 0, '2024-10-26 08:00:52', '2024-10-26 08:00:52'),
+(2, 'bookings', 57, 0, '2024-10-26 08:00:52', '2024-10-26 08:00:52'),
+(3, 'accommodations', 15, 0, '2024-10-26 08:00:52', '2024-10-26 08:00:52'),
+(4, 'images', 23, 0, '2024-10-26 08:00:52', '2024-10-26 08:00:52');
+
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `accommodations`
+--
+ALTER TABLE `accommodations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `activities`
+--
+ALTER TABLE `activities`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `boats`
+--
+ALTER TABLE `boats`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `bookings`
@@ -940,14 +1634,218 @@ ALTER TABLE `bookings`
   ADD KEY `bookings_userid_foreign` (`userid`);
 
 --
+-- Indexes for table `cache`
+--
+ALTER TABLE `cache`
+  ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `cache_locks`
+--
+ALTER TABLE `cache_locks`
+  ADD PRIMARY KEY (`key`);
+
+--
+-- Indexes for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `failed_jobs_uuid_unique` (`uuid`);
+
+--
+-- Indexes for table `images`
+--
+ALTER TABLE `images`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `jobs`
+--
+ALTER TABLE `jobs`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `jobs_queue_index` (`queue`);
+
+--
+-- Indexes for table `job_batches`
+--
+ALTER TABLE `job_batches`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `migrations`
+--
+ALTER TABLE `migrations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `notifications`
+--
+ALTER TABLE `notifications`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `notifications_notifiable_type_notifiable_id_index` (`notifiable_type`,`notifiable_id`);
+
+--
+-- Indexes for table `notifies`
+--
+ALTER TABLE `notifies`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `parkings`
+--
+ALTER TABLE `parkings`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `password_resets`
+--
+ALTER TABLE `password_resets`
+  ADD KEY `password_resets_email_index` (`email`);
+
+--
+-- Indexes for table `password_reset_tokens`
+--
+ALTER TABLE `password_reset_tokens`
+  ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `reports`
+--
+ALTER TABLE `reports`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `roles`
+--
+ALTER TABLE `roles`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sessions`
+--
+ALTER TABLE `sessions`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `sessions_user_id_index` (`user_id`),
+  ADD KEY `sessions_last_activity_index` (`last_activity`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `users_email_unique` (`email`);
+
+--
+-- Indexes for table `visits`
+--
+ALTER TABLE `visits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `watchers`
+--
+ALTER TABLE `watchers`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `accommodations`
+--
+ALTER TABLE `accommodations`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `activities`
+--
+ALTER TABLE `activities`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+
+--
+-- AUTO_INCREMENT for table `boats`
+--
+ALTER TABLE `boats`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `bookings`
 --
 ALTER TABLE `bookings`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1008;
+
+--
+-- AUTO_INCREMENT for table `failed_jobs`
+--
+ALTER TABLE `failed_jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `images`
+--
+ALTER TABLE `images`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `jobs`
+--
+ALTER TABLE `jobs`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `migrations`
+--
+ALTER TABLE `migrations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+
+--
+-- AUTO_INCREMENT for table `notifications`
+--
+ALTER TABLE `notifications`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `notifies`
+--
+ALTER TABLE `notifies`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=68;
+
+--
+-- AUTO_INCREMENT for table `parkings`
+--
+ALTER TABLE `parkings`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `reports`
+--
+ALTER TABLE `reports`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `roles`
+--
+ALTER TABLE `roles`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=980;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `visits`
+--
+ALTER TABLE `visits`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `watchers`
+--
+ALTER TABLE `watchers`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
